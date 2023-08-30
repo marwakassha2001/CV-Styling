@@ -1,0 +1,184 @@
+header{
+    background-color: gray;
+    color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content:first baseline;
+}
+
+
+body{
+    margin:0;
+}
+
+.content{
+     display: grid;
+     grid-template-columns: 50% 50%;
+     width: 90%;
+     margin: auto;
+}
+#wrapper{
+    position: relative;
+    padding-right: 0%;
+
+}
+#contact{
+    position:absolute;
+    top:5%;
+    right: 10%;
+
+}
+
+.contact{
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 0;
+}
+#contact h3{
+    display: none;
+}
+.contact-value{
+    background-color:black;
+    margin: 0;
+}
+.contact-type{
+    background-color:red;
+    padding-right: 100px;
+}
+.contact dd a {
+    text-decoration: none;
+    color: red;
+}
+.skill{
+    position: relative;
+    padding: 8px 20px;
+    background-color: gray;
+    margin: 5px;
+    padding: 0px 5px 10px 0px;
+    color: white;
+
+}
+.experience h4,
+.experience-date-separator {
+    color: red;
+}
+
+span{
+    display:inline-block;
+}
+.skill[data-skill="3"] span {
+    background-color:red;
+    width: 30%;
+    margin:5px;
+    padding: 1px;
+}
+.skill[data-skill="5"] span{
+    background-color: red;
+    width :55%;
+    margin: 5px;
+    padding :1px;
+}
+.skill[data-skill="1"] span{
+    background-color: red;
+    width: 40px;
+    margin:5px;
+    padding:1px;
+}
+.skill[data-skill="7"] span{
+    background-color:red;
+    width:80%;
+    margin:5px;
+    padding:1px;
+
+}
+.skill[data-skill="9"] span{
+    background-color: red;
+    width: 80%;
+    margin:5px;
+    padding:1px;
+}
+.skills-secondary{
+    opacity:0.7;
+}
+.skills-primary::before{
+    content:"Main" ;
+}
+
+.skills-secondary::before{
+    content:"Other" ;
+}
+
+.experience-institution::before {
+    content: "@";
+    color: red;
+}
+.experience-institution {
+    font-weight: lighter;
+}
+.experience-details {
+    color: rgb(128, 119, 119);
+    margin-left: 10px;
+    margin-top: -10px;
+}
+.experience-details::before {
+    content: "In ";
+}
+section h3 {
+    border-bottom: 1px solid rgb(3, 3, 3);
+    width: auto;
+    margin: 0;
+    margin-bottom: 5px;
+}
+section h3::before {
+    content: '\2022';
+    color: red;
+    font-size: 55px;
+    height: 50%;
+    vertical-align: middle;
+}
+@media (max-width:800px) {
+    .content {
+        display: grid;
+        grid-template-columns: 100%;
+
+    }
+
+    header div {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #contact {
+        position: inherit;
+
+    }
+
+    #contact h3 {
+        display: block;
+    }
+
+    .contact {
+        display: grid;
+        grid-template-columns: 33% 70%;
+    }
+
+    .contact dt {
+        flex: 1;
+        color: white;
+        display: inline-block;
+    }
+
+    .contact dd {
+        flex: 2;
+        color: black;
+        background-color: white;
+        margin-left: 0px;
+        padding-right: 100px;
+
+    }
+    .contact dd a{
+        text-decoration: none;
+    }
+}
